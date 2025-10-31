@@ -21,20 +21,48 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .modal-content {
+      background: #111;
+      border-radius: 12px;
+      max-width: 90%;
+      width: 800px;
+      position: relative;
+    }
+    .modal iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+      border-radius: 12px;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
   </style>
 </head>
 
 <body class="font-sans antialiased">
-
-  <!-- ÍCONES SOCIAIS -->
-  <header class="w-full flex justify-end items-center px-6 py-4 bg-transparent fixed top-0 z-50">
-    <div class="flex gap-5 text-zinc-400 text-xl">
-      <a href="https://www.linkedin.com/in/egrellert" target="_blank" class="hover:text-sky-500 transition"><i class="fa-brands fa-linkedin"></i></a>
-      <a href="https://github.com/egrellert" target="_blank" class="hover:text-sky-500 transition"><i class="fa-brands fa-github"></i></a>
-      <a href="mailto:egrellert@gmail.com" class="hover:text-sky-500 transition"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-  </header>
-
   <!-- Hero -->
   <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
     <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Transformo dados em visualizações que orientam decisões e impulsionam negócios.</h1>
@@ -45,26 +73,41 @@
     </a>
   </section>
 
+  <!-- Sobre mim -->
+  <section id="sobre" class="bg-zinc-950 py-16 fade-in">
+    <div class="max-w-4xl mx-auto text-center px-6">
+      <img src="https://ui-avatars.com/api/?name=Everton+Grellert&background=0a0a0a&color=ffffff&size=128" alt="Foto de Everton Grellert" class="w-28 h-28 rounded-full mx-auto mb-6 border-2 border-sky-500">
+      <h2 class="text-2xl font-semibold mb-2">Everton Grellert</h2>
+      <p class="text-zinc-400 max-w-2xl mx-auto">
+        Analista de Dados especializado em Power BI, modelagem de dados e automação de processos. 
+        Apaixonado por transformar informações em insights que apoiam decisões estratégicas em diferentes setores.
+      </p>
+    </div>
+  </section>
+
   <!-- Principais Habilidades -->
   <section id="habilidades" class="bg-zinc-950 py-20">
     <div class="max-w-5xl mx-auto px-6">
       <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Principais habilidades</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
         <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
-          <i class="fa-solid fa-chart-line text-sky-400 text-3xl mb-3"></i>
-          <h4 class="text-white font-semibold mb-2">Visualização de Dados</h4>
+          <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-chart-line text-sky-400"></i> Visualização de Dados
+          </h4>
           <p class="text-zinc-400 text-sm mb-3">Criação de dashboards e relatórios que comunicam resultados de forma clara e estratégica.</p>
           <p class="text-sky-400 text-xs">#PowerBI #Excel</p>
         </div>
         <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
-          <i class="fa-solid fa-database text-sky-400 text-3xl mb-3"></i>
-          <h4 class="text-white font-semibold mb-2">Modelagem e DAX</h4>
+          <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-database text-sky-400"></i> Modelagem e DAX
+          </h4>
           <p class="text-zinc-400 text-sm mb-3">Desenvolvimento de modelos de dados eficientes e medidas avançadas em DAX.</p>
           <p class="text-sky-400 text-xs">#DAX #SQL</p>
         </div>
         <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
-          <i class="fa-solid fa-gears text-sky-400 text-3xl mb-3"></i>
-          <h4 class="text-white font-semibold mb-2">ETL e Power Query</h4>
+          <h4 class="text-white font-semibold mb-2 flex items-center gap-2">
+            <i class="fa-solid fa-gears text-sky-400"></i> ETL e Power Query
+          </h4>
           <p class="text-zinc-400 text-sm mb-3">Transformação e integração de dados a partir de múltiplas fontes, garantindo consistência e automação.</p>
           <p class="text-sky-400 text-xs">#SQL #Python #M #Excel</p>
         </div>
@@ -72,43 +115,34 @@
     </div>
   </section>
 
-  <!-- Projetos Power BI -->
-  <section id="projetos" class="bg-zinc-950 py-20">
+  <!-- Cases -->
+  <section id="cases" class="bg-zinc-950 py-20">
     <div class="max-w-5xl mx-auto px-6">
-      <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Projetos Power BI</h2>
+      <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Cases e Dashboards</h2>
       <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-        <!-- Projeto 1 -->
-        <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-sky-500 hover:scale-105 transition-all fade-in">
-          <img src="https://i.imgur.com/6yI8tEw.png" alt="Dashboard Financeiro" class="w-full h-40 object-cover">
-          <div class="p-5">
-            <h4 class="text-white font-semibold mb-2">Dashboard Financeiro</h4>
-            <p class="text-zinc-400 text-sm mb-3">Análises de receitas, despesas e lucro líquido com KPIs automáticos e segmentação mensal.</p>
-            <a href="#" target="_blank" class="text-sky-400 text-sm hover:underline">Ver projeto →</a>
-          </div>
+        <div class="relative group cursor-pointer fade-in" onclick="openModal('https://app.powerbi.com/view?r=eyJrIjoiZWE2ZjZmZWQtZTIzMC00OTJlLTk4MDYtZjAxMjZlYWQ1NDgxIiwidCI6IjZhNjVmZjNkLTI1NmMtNDVlZS1iNGM3LWYzOTYzYzExMjYyZSJ9')">
+          <img src="https://placehold.co/600x400/0a0a0a/skyblue?text=Telecom+Dashboard" alt="Case Telecom" class="rounded-xl border border-zinc-800 group-hover:border-sky-500 transition-all">
+          <p class="text-center text-zinc-400 mt-2">Telecomunicações</p>
         </div>
-
-        <!-- Projeto 2 -->
-        <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-sky-500 hover:scale-105 transition-all fade-in">
-          <img src="https://i.imgur.com/PRb6KJr.png" alt="Dashboard Comercial" class="w-full h-40 object-cover">
-          <div class="p-5">
-            <h4 class="text-white font-semibold mb-2">Dashboard Comercial</h4>
-            <p class="text-zinc-400 text-sm mb-3">Acompanhamento de metas, pipeline de vendas e performance por representante.</p>
-            <a href="#" target="_blank" class="text-sky-400 text-sm hover:underline">Ver projeto →</a>
-          </div>
+        <div class="relative group cursor-pointer fade-in" onclick="openModal('https://app.powerbi.com/view?r=eyJrIjoiNGE1Mjg1ZjktZjEzMC00YjA2LTkxOWMtMWIzN2ZmZDUxYzI5IiwidCI6IjZhNjVmZjNkLTI1NmMtNDVlZS1iNGM3LWYzOTYzYzExMjYyZSJ9')">
+          <img src="https://placehold.co/600x400/0a0a0a/skyblue?text=Imobili%C3%A1rio+Dashboard" alt="Case Imobiliário" class="rounded-xl border border-zinc-800 group-hover:border-sky-500 transition-all">
+          <p class="text-center text-zinc-400 mt-2">Mercado Imobiliário</p>
         </div>
-
-        <!-- Projeto 3 -->
-        <div class="bg-zinc-900 border border-zinc-800 rounded-xl overflow-hidden hover:border-sky-500 hover:scale-105 transition-all fade-in">
-          <img src="https://i.imgur.com/vh7Jb8F.png" alt="Dashboard RH" class="w-full h-40 object-cover">
-          <div class="p-5">
-            <h4 class="text-white font-semibold mb-2">Dashboard RH</h4>
-            <p class="text-zinc-400 text-sm mb-3">Indicadores de turnover, absenteísmo e headcount com análise comparativa anual.</p>
-            <a href="#" target="_blank" class="text-sky-400 text-sm hover:underline">Ver projeto →</a>
-          </div>
+        <div class="relative group cursor-pointer fade-in" onclick="openModal('https://app.powerbi.com/view?r=eyJrIjoiM2ZkNjg3MzgtMTM1YS00MzliLWI4MjctZGVjYzNiYTI2ZjQxIiwidCI6IjZhNjVmZjNkLTI1NmMtNDVlZS1iNGM3LWYzOTYzYzExMjYyZSJ9')">
+          <img src="https://placehold.co/600x400/0a0a0a/skyblue?text=Agroneg%C3%B3cio+Dashboard" alt="Case Agronegócio" class="rounded-xl border border-zinc-800 group-hover:border-sky-500 transition-all">
+          <p class="text-center text-zinc-400 mt-2">Agronegócio</p>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeModal()">&times;</span>
+      <iframe id="modal-iframe" src=""></iframe>
+    </div>
+  </div>
 
   <!-- Áreas de Atuação -->
   <section id="atuacao" class="bg-zinc-950 py-20">
@@ -142,12 +176,26 @@
   </footer>
 
   <script>
+    // Fade-in ao scroll
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) entry.target.classList.add('visible');
+        else entry.target.classList.remove('visible');
       });
     }, { threshold: 0.1 });
     document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+
+    // Modal Power BI
+    const modal = document.getElementById('modal');
+    const iframe = document.getElementById('modal-iframe');
+    function openModal(url) {
+      iframe.src = url;
+      modal.classList.add('active');
+    }
+    function closeModal() {
+      modal.classList.remove('active');
+      iframe.src = '';
+    }
   </script>
 </body>
 </html>
