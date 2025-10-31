@@ -1,1 +1,111 @@
-<!DOCTYPE html> <html lang="pt-br"> <head> <meta charset="UTF-8" /> <meta name="viewport" content="width=device-width, initial-scale=1.0" /> <title>Everton Grellert - Power BI Portfolio</title> <script src="https://cdn.tailwindcss.com"></script> <script src="https://kit.fontawesome.com/a2e0e9f6c4.js" crossorigin="anonymous"></script> <style> body { background-color: #0a0a0a; color: #fafafa; scroll-behavior: smooth; } .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.8s ease, transform 0.8s ease; } .fade-in.visible { opacity: 1; transform: translateY(0); } </style> </head> <body class="font-sans antialiased"> <!-- Hero --> <section class="min-h-screen flex flex-col justify-center items-center text-center px-6"> <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Transformo dados em visualizações que orientam decisões e impulsionam negócios.</h1> <p class="text-zinc-400 mb-8 fade-in max-w-2xl">A mais de 7 anos, ajudo empresas a transformar dados em insights estratégicos por meio de dashboards interativos, modelagem de dados eficiente e automação de processos com Power BI e outras ferramentas.</p> <a href="https://wa.me/5553984406181?text=Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20com%20você" target="_blank" class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-full transition-all fade-in"> <i class="fa-brands fa-whatsapp mr-2"></i>Entre em contato </a> </section> <!-- Principais Habilidades --> <section id="habilidades" class="bg-zinc-950 py-20"> <div class="max-w-5xl mx-auto px-6"> <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Principais habilidades</h2> <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8"> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-chart-line text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold mb-2">Visualização de Dados</h4> <p class="text-zinc-400 text-sm mb-3">Criação de dashboards e relatórios que comunicam resultados de forma clara e estratégica.</p> <p class="text-sky-400 text-xs">#PowerBI #Excel</p> </div> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-database text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold mb-2">Modelagem e DAX</h4> <p class="text-zinc-400 text-sm mb-3">Desenvolvimento de modelos de dados eficientes e medidas avançadas em DAX.</p> <p class="text-sky-400 text-xs">#DAX #SQL</p> </div> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-gears text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold mb-2">ETL e Power Query</h4> <p class="text-zinc-400 text-sm mb-3">Transformação e integração de dados a partir de múltiplas fontes, garantindo consistência e automação.</p> <p class="text-sky-400 text-xs">#SQL #Python #M #Excel</p> </div> </div> </div> </section> <!-- Áreas de Atuação --> <section id="atuacao" class="bg-zinc-950 py-20"> <div class="max-w-5xl mx-auto px-6"> <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Áreas de atuação</h2> <p class="text-zinc-400 mb-8">Projetos desenvolvidos em diferentes setores — estes são alguns exemplos:</p> <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8"> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-tower-broadcast text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold">Telecomunicações</h4> </div> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-code text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold">Desenvolvimento de Software</h4> </div> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-building text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold">Mercado Imobiliário e Construção Civil</h4> </div> <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in"> <i class="fa-solid fa-wheat-awn text-sky-400 text-3xl mb-3"></i> <h4 class="text-white font-semibold">Agronegócio</h4> </div> </div> <p class="text-zinc-500 text-sm mt-8 text-center">E outras áreas nas quais dados podem gerar valor.</p> </div> </section> <footer class="bg-black py-10 text-center text-zinc-500 text-sm"> <p>© 2025 Everton Grellert — Todos os direitos reservados.</p> </footer> <script> // Fade-in ao scroll, sempre que o elemento entrar na tela const observer = new IntersectionObserver((entries) => { entries.forEach((entry) => { if (entry.isIntersecting) { entry.target.classList.add('visible'); } else { entry.target.classList.remove('visible'); } }); }, { threshold: 0.1 }); document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el)); </script> </body> </html>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Everton Grellert - Power BI Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a2e0e9f6c4.js" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #fafafa;
+      scroll-behavior: smooth;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+
+<body class="font-sans antialiased">
+  <!-- Hero -->
+  <section class="min-h-screen flex flex-col justify-center items-center text-center px-6">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 fade-in">Transformo dados em visualizações que orientam decisões e impulsionam negócios.</h1>
+    <p class="text-zinc-400 mb-8 fade-in max-w-2xl">A mais de 7 anos, ajudo empresas a transformar dados em insights estratégicos por meio de dashboards interativos, modelagem de dados eficiente e automação de processos com Power BI e outras ferramentas.</p>
+    <a href="https://wa.me/5553984406181?text=Vi%20seu%20portfólio%20e%20gostaria%20de%20conversar%20com%20você" target="_blank"
+      class="bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 rounded-full transition-all fade-in">
+      <i class="fa-brands fa-whatsapp mr-2"></i>Entre em contato
+    </a>
+  </section>
+
+  <!-- Principais Habilidades -->
+  <section id="habilidades" class="bg-zinc-950 py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Principais habilidades</h2>
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-chart-line text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold mb-2">Visualização de Dados</h4>
+          <p class="text-zinc-400 text-sm mb-3">Criação de dashboards e relatórios que comunicam resultados de forma clara e estratégica.</p>
+          <p class="text-sky-400 text-xs">#PowerBI #Excel</p>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-database text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold mb-2">Modelagem e DAX</h4>
+          <p class="text-zinc-400 text-sm mb-3">Desenvolvimento de modelos de dados eficientes e medidas avançadas em DAX.</p>
+          <p class="text-sky-400 text-xs">#DAX #SQL</p>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-gears text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold mb-2">ETL e Power Query</h4>
+          <p class="text-zinc-400 text-sm mb-3">Transformação e integração de dados a partir de múltiplas fontes, garantindo consistência e automação.</p>
+          <p class="text-sky-400 text-xs">#SQL #Python #M #Excel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Áreas de Atuação -->
+  <section id="atuacao" class="bg-zinc-950 py-20">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-xl font-semibold mb-8 border-l-4 border-sky-500 pl-3">Áreas de atuação</h2>
+      <p class="text-zinc-400 mb-8">Projetos desenvolvidos em diferentes setores — estes são alguns exemplos:</p>
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-tower-broadcast text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold">Telecomunicações</h4>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-code text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold">Desenvolvimento de Software</h4>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-building text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold">Mercado Imobiliário e Construção Civil</h4>
+        </div>
+        <div class="bg-zinc-900 border border-zinc-800 rounded-xl p-6 hover:border-sky-500 hover:scale-105 transition-all fade-in">
+          <i class="fa-solid fa-wheat-awn text-sky-400 text-3xl mb-3"></i>
+          <h4 class="text-white font-semibold">Agronegócio</h4>
+        </div>
+      </div>
+      <p class="text-zinc-500 text-sm mt-8 text-center">E outras áreas nas quais dados podem gerar valor.</p>
+    </div>
+  </section>
+
+  <footer class="bg-black py-10 text-center text-zinc-500 text-sm">
+    <p>© 2025 Everton Grellert — Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Fade-in ao scroll, sempre que o elemento entrar na tela
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        } else {
+          entry.target.classList.remove('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+  </script>
+</body>
+</html>
